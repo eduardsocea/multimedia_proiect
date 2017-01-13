@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "Roboto";
+    src: url('media/fonts/Roboto-Regular.ttf');
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+/*layout pentru video*/
+#media-container{
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.3); /*shadow effect - materialize design*/
+    
+}
+
+.wrapper{
+    padding-top: 100px;
+}
+.container{
+    height: 100%;
+    background-image: url('media/light_noise_diagonal.png');
+    background-repeat: repeat;
+}
+
+/*style pentru sandwitch(menu) button*/
+.nav-icon{
+    position: absolute;
+    top: 5%;
+    right: 2.5%;
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+    z-index: 1000;
+}
+/*style pentru elementele pentru filtru*/
+.nav-items{
+    position:absolute;
+    display: none;
+    right:0;    
+    height:100%;
+    width:20%;
+    background-color:#fafafa;
+    z-index: 100;
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.3);
+}
+
+.nav-items ul{
+    margin-top:100px;
+    list-style-type: none;
+}
+.nav-items li{
+    padding-bottom: 20px;
+}
+
+/*style pentru canvasul de butoane pentru video*/
+#video-navigation{
+    position:relative;
+    display: block;
+    margin:-0 auto 0 auto;
+    border:2px solid #E0E0E0;
+    background-color: #E0E0E0;
+    
+}
+
+/*style pentru meniul principal*/
+.left-nav{
+    width:200px;
+    height:100%;
+    background-color: #455A64;
+    float:left;
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.3);
+}
+
+.left-nav-header{
+    margin: 100 0 20 20;
+    font-weight: 700;
+    font-size: 20px;
+    color: #CFD8DC;
+    text-shadow: 2px 2px rgba(0,0,0,0.14)
+}
+
+.left-nav ul{
+    margin:20 20 20 0;
+    list-style-type: none;
+    color: #ECEFF1;
+    cursor: pointer;
+
+}
+
+.left-nav ul li span{
+    position: relative;
+}
+/*initializare border pentru elementele din meniu*/
+.left-nav ul li span:after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #ECEFF1;
+  transition: 0.4s; /*efect de tranzitie*/
+}
+/*afisare border la 100% pe hover*/
+.left-nav ul li span:hover:after{
+  width: 100%;
+}
+
+.slider-container input{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.slider-value{
+    width:40px;
+}
+
+.reset-filter{
+    margin-left: 20px;
+}

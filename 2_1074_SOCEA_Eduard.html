@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>2_1074_SOCEA_Eduard</title>
+    <link rel="stylesheet" href="2_1074_SOCEA_Eduard.css">
+    <script type="text/javascript" src="lib/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="2_1074_SOCEA_Eduard.js"></script>
+</head>
+
+<body onload="drawVideoNav();">
+    <div class="container">
+
+        <nav class="nav-container">
+            <div class="left-nav">
+                <p class="left-nav-header">Playlist</p>
+                <ul>
+                    <li>
+                        <span name="bridge.mp4" onclick='loadVideo("media/bridge.mp4")'>Bridge</span>
+                    </li>
+                    <li>
+                        <span name="rabbit.mp4" onclick='loadVideo("media/rabbit.mp4")'>Rabbit</span>
+                    </li>
+                    <li>
+                        <span name="robot.mp4" onclick='loadVideo("media/robot.mp4")'>Robot</span>
+                    </li>
+                    <li>
+                        <span name="snowflakes.mp4" onclick='loadVideo("media/snowflakes.mp4")'>Snowflakes</span>
+                    </li>
+                    <li>
+                        <span name="christmas.mp4" onclick='loadVideo("media/christmas.mp4")'>Christmas</span>
+                    </li>
+                </ul>
+            </div>
+
+            <img src="media/menu-icon.png" class="nav-icon" />
+            <div class="nav-items">
+                <ul>
+                    <li class="slider-container">
+                        <span class="filter-name">Grayscale</span>
+                        </br>
+                        <input class="slider" type="range" min="0" max="1" step="0.1" value="0" />
+                        <input class="slider-value" type="number" readonly/>
+                    </li>
+                    <li class="slider-container">
+                        <span class="filter-name">Sepia</span>
+                        </br>
+                        <input class="slider" type="range" min="0" max="1" step="0.1" value="0" />
+                        <input class="slider-value" type="number" readonly/>
+                    </li>
+                    <li class="slider-container">
+                        <span class="filter-name">Saturation</span>
+                        </br>
+                        <input class="slider" type="range" min="0" max="2" step="0.1" value="1" />
+                        <input class="slider-value" type="number" readonly/>
+                    </li>
+                    <li class="slider-container">
+                        <span class="filter-name">Brightness</span>
+                        </br>
+                        <input class="slider" type="range" min="0" max="2" step="0.1" value="1" />
+                        <input class="slider-value" type="number" readonly/>
+                    </li>
+                    <li class="slider-container">
+                        <span class="filter-name">Contrast</span>
+                        </br>
+                        <input class="slider" type="range" min="0" max="2" step="0.1" value="1" />
+                        <input class="slider-value" type="number" readonly/>
+                    </li>
+                    <li>
+                        <input class="apply-filter" type="button" value="Apply" />
+                        <input class="reset-filter" type="button" value="Reset"/>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="wrapper">
+            <video id='media-container' width="1000" controls>
+                <source src="media/bridge.mp4" type="video/mp4">
+            </video>
+            <canvas id="video-navigation" height="30"></canvas>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
